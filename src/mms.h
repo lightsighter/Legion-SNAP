@@ -20,7 +20,7 @@
 #define __MMS_H__
 
 #include "snap.h"
-#include "legion.h"
+#include "resilience.h"
 
 class MMSInitFlux : public SnapTask<MMSInitFlux, Snap::MMS_INIT_FLUX_TASK_ID> {
 public:

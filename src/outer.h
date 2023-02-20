@@ -20,7 +20,7 @@
 #define __OUTER_H__
 
 #include "snap.h"
-#include "legion.h"
+#include "resilience.h"
 
 class CalcOuterSource : public SnapTask<CalcOuterSource, 
                                         Snap::CALC_OUTER_SOURCE_TASK_ID> {

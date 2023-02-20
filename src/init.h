@@ -20,7 +20,7 @@
 #define __INIT_H__
 
 #include "snap.h"
-#include "legion.h"
+#include "resilience.h"
 
 class InitMaterial : public SnapTask<InitMaterial,
                                      Snap::INIT_MATERIAL_TASK_ID> {

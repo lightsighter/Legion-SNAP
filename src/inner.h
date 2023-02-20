@@ -20,7 +20,7 @@
 #define __INNER_H__
 
 #include "snap.h"
-#include "legion.h"
+#include "resilience.h"
 
 class CalcInnerSource : public SnapTask<CalcInnerSource, 
                                         Snap::CALC_INNER_SOURCE_TASK_ID> {

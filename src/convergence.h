@@ -20,7 +20,7 @@
 #define __SNAP_CONVERGENCE_H__
 
 #include "snap.h"
-#include "legion.h"
+#include "resilience.h"
 
 // This class will issue a chain of single task launches
 // that when executed will emulate the execution of a 

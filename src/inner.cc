@@ -113,7 +113,9 @@ CalcInnerSource::CalcInnerSource(const Snap &snap, const Predicate &pred,
   Domain<3> dom = runtime->get_index_space_domain(ctx, 
           IndexSpace<3>(task->regions[0].region.get_index_space()));
   const bool multi_moment = (Snap::num_moments > 1);
+#ifndef NDEBUG
   const unsigned num_groups = task->regions[0].privilege_fields.size();
+#endif
   assert(num_groups == task->regions[1].privilege_fields.size());
   assert(num_groups == task->regions[2].privilege_fields.size());
   for (std::set<FieldID>::const_iterator it = 
@@ -185,7 +187,9 @@ CalcInnerSource::CalcInnerSource(const Snap &snap, const Predicate &pred,
   Domain<3> dom = runtime->get_index_space_domain(ctx, 
           IndexSpace<3>(task->regions[0].region.get_index_space()));
   const bool multi_moment = (Snap::num_moments > 1);
+#ifndef NDEBUG
   const unsigned num_groups = task->regions[0].privilege_fields.size();
+#endif
   assert(num_groups == task->regions[1].privilege_fields.size());
   assert(num_groups == task->regions[2].privilege_fields.size());
 

@@ -19,7 +19,7 @@
 #ifndef __SNAP_H__
 #define __SNAP_H__
 
-#include "legion.h"
+#include "resilience.h"
 #include "default_mapper.h"
 #include "snap_types.h"
 
@@ -39,6 +39,9 @@
 #ifndef PI
 #define PI (3.14159265358979)
 #endif
+
+// Hack: this seems to be the shortest way to override the namespace
+#define Legion ResilientLegion
 
 template<int DIM>
 using Point = Legion::Point<DIM,long long>;

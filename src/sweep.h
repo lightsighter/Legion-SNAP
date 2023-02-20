@@ -20,7 +20,7 @@
 #define __SWEEP_H__
 
 #include "snap.h"
-#include "legion.h"
+#include "resilience.h"
 
 class MiniKBATask : public SnapTask<MiniKBATask, Snap::MINI_KBA_TASK_ID> {
 public:

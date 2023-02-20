@@ -20,7 +20,7 @@
 #define __EXPXS_H__
 
 #include "snap.h"
-#include "legion.h"
+#include "resilience.h"
 
 class ExpandCrossSection : public SnapTask<ExpandCrossSection,
                                            Snap::EXPAND_CROSS_SECTION_TASK_ID> {

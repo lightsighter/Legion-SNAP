@@ -409,6 +409,7 @@ void Snap::transport_solve(void)
   bool even_time_step = false;
   for (int cy = 0; cy < num_steps; ++cy)
   {
+    runtime->checkpoint(ctx);
     even_time_step = !even_time_step;
     // Some of this is a little weird, you can in theory lift some
     // of this out the time stepping loop because the mock velocity 
@@ -790,6 +791,7 @@ Predicate Snap::test_outer_convergence(const Predicate &outer_pred,
                                      Context ctx, Runtime *runtime)
 //------------------------------------------------------------------------------
 {
+  runtime->enable_checkpointing(ctx);
   runtime->print_once(ctx,stdout,"Welcome to Legion-SNAP!\n");
   report_arguments(runtime, ctx);
   Snap snap(ctx, runtime); 

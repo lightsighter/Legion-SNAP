@@ -64,6 +64,7 @@ target_compile_definitions(snap PRIVATE DISABLE_SPECULATION SNAP_USE_RELAXED_COH
 target_compile_options(snap PRIVATE -march=native) # Apparently can't build without this
 
 target_compile_options(snap PRIVATE -Wno-ignored-attributes) # FIXME: https://github.com/StanfordLegion/Legion-SNAP/issues/2
+target_compile_options(snap PRIVATE -Wno-maybe-uninitialized)
 
 target_link_libraries(snap Legion::Legion ResilienceStatic)
 

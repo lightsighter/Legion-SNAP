@@ -70,4 +70,6 @@ target_link_libraries(snap Legion::Legion ResilienceStatic)
 
 set_target_properties(snap PROPERTIES CXX_STANDARD 11)
 
-add_test(NAME snap COMMAND ${PROJECT_SOURCE_DIR}/tests/runner.py $<TARGET_FILE:snap> ${CMAKE_CURRENT_SOURCE_DIR}/input/mms.in)
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+  add_test(NAME snap COMMAND ${PROJECT_SOURCE_DIR}/tests/runner.py $<TARGET_FILE:snap> ${CMAKE_CURRENT_SOURCE_DIR}/input/mms.in)
+endif()

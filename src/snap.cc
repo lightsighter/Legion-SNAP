@@ -409,7 +409,7 @@ void Snap::transport_solve(void)
   bool even_time_step = false;
   for (int cy = 0; cy < num_steps; ++cy)
   {
-    // runtime->checkpoint(ctx); // FIXME: https://github.com/StanfordLegion/legion/issues/1406
+    runtime->checkpoint(ctx); // FIXME: https://github.com/StanfordLegion/legion/issues/1406
     even_time_step = !even_time_step;
     // Some of this is a little weird, you can in theory lift some
     // of this out the time stepping loop because the mock velocity 

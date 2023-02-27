@@ -70,5 +70,5 @@ target_link_libraries(snap Legion::Legion ResilienceStatic)
 
 set_target_properties(snap PROPERTIES CXX_STANDARD 11)
 
-add_test(NAME snap COMMAND ${PROJECT_SOURCE_DIR}/tests/runner.py --no-diff -- $<TARGET_FILE:snap> ${CMAKE_CURRENT_SOURCE_DIR}/input/mms.in)
-add_test(NAME snap_disable COMMAND ${PROJECT_SOURCE_DIR}/tests/runner.py --no-diff -- $<TARGET_FILE:snap> ${CMAKE_CURRENT_SOURCE_DIR}/input/mms.in -checkpoint:disable)
+add_test(NAME snap COMMAND ${PROJECT_SOURCE_DIR}/tests/runner.py --no-diff -- ${RESILIENCE_TEST_LAUNCHER} $<TARGET_FILE:snap> ${CMAKE_CURRENT_SOURCE_DIR}/input/mms.in)
+add_test(NAME snap_disable COMMAND ${PROJECT_SOURCE_DIR}/tests/runner.py --no-diff -- ${RESILIENCE_TEST_LAUNCHER} $<TARGET_FILE:snap> ${CMAKE_CURRENT_SOURCE_DIR}/input/mms.in -checkpoint:disable)

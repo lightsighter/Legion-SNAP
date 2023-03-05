@@ -193,12 +193,6 @@ void Snap::SnapMapper::map_copy(const MapperContext ctx,
                                       MapCopyOutput &output)
 //------------------------------------------------------------------------------
 {
-  // If we're in a checkpoint copy, fall back to default mapper.
-  if (copy.index_point.get_dim() != 3) {
-    DefaultMapper::map_copy(ctx, copy, input, output);
-    return;
-  }
-
   // See if we already know where the copy is going
   for (unsigned idx = 0; idx < copy.src_requirements.size(); idx++)
   {

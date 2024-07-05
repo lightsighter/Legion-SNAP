@@ -42,7 +42,7 @@ ConvergenceMonad::ConvergenceMonad(Context c, Runtime *rt)
   init_data.total_outer_time = 0;
   init_data.total_step_time = 0;
 
-  monad_future = Future::from_untyped_pointer(&init_data,
+  monad_future = Future::from_untyped_pointer(runtime, &init_data,
                                               sizeof(init_data));
 }
 

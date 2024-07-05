@@ -401,7 +401,7 @@ void Snap::transport_solve(void)
   std::deque<Future> inner_converged_tests;
   // Use this for when predicates evaluate to false, tasks can then
   // return true to indicate convergence
-  const Future true_future = Future::from_value<bool>(true);
+  const Future true_future = Future::from_value<bool>(runtime, true);
   // Use this for printing convergence and timing information
   // in a deferred execution environment with predication
   ConvergenceMonad convergence(ctx, runtime);
